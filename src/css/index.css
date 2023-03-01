@@ -1,0 +1,521 @@
+:root {
+  --white-color: #fff;
+  --back-color: #000;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--back-color);
+  box-sizing: border-box;
+}
+
+.dash-board-header>h2 {
+  font-size: 4.4rem;
+}
+
+.dash-board-main {
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu-main {
+  position: fixed;
+  border-right: 1px solid #ccc;
+  width: 20%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.menu-header>p {
+  font-size: 3.4rem;
+  font-weight: 700;
+  padding: 5rem;
+}
+
+.menu-content>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-content>ul>li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  padding-left: 5rem;
+  cursor: pointer;
+}
+
+.menu-content>ul>li:hover {
+  background-color: rgba(51, 163, 142, 0.1);
+}
+
+.menu-content>ul>li:hover::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(51, 163, 142);
+  width: 0.3rem;
+  height: 100%;
+  right: 0;
+}
+
+.menu-content>ul>li>span {
+  font-weight: 600;
+  margin: 2rem 1rem;
+}
+
+.menu-content>ul>li>.nav-link {
+  text-decoration: none;
+  color: #000;
+  margin: 2rem 1rem;
+}
+
+.menu-content>ul>li>.nav-link>span {
+  font-weight: 600;
+  margin: 2rem 1rem;
+}
+
+.menu-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+}
+
+.DasboardMain-main {
+  margin-left: 20%;
+  background-color: rgba(51, 163, 142, 0.05);
+  width: 80%;
+}
+
+.menu-footer>ul>li {
+  width: 100%;
+  position: relative;
+}
+
+.header-container {
+  padding: 5rem;
+}
+
+.header-container>ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container>ul>li {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.header-icon-search {
+  font-size: 2.2rem;
+}
+
+.header-input>input {
+  background: none;
+  padding: 1rem 0.5rem;
+  border: none;
+}
+
+.header-input>input:focus {
+  outline: none;
+}
+
+.infor>span {
+  margin: 0 0.5rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user>i {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.img-user {
+  width: 4rem;
+  height: 4rem;
+}
+
+.img-user>img {
+  border-radius: 4rem;
+  width: 100%;
+  height: 4rem;
+  background-size: cover;
+}
+
+.over-view-container {
+  padding: 0 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.over-view-col {
+  margin: 5rem 0;
+  width: 33.3333333333%;
+}
+
+.col-main {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: rgba(51, 163, 142, 0.2);
+  margin: 0 1.5rem;
+  padding: 2.5rem 2.5rem;
+  /* height: 42rem; */
+}
+
+.col-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.data-title {
+  font-weight: 700;
+}
+
+.Addlist-main {
+  width: 80%;
+  margin-left: 20%;
+}
+
+.menu-control {
+  cursor: pointer;
+}
+
+.col-header>span {
+  display: flex;
+}
+
+.col-header>span>p {
+  margin: 0 1rem;
+}
+
+.col-description {
+  margin-top: 5rem;
+}
+
+.des-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.des-header>i {
+  transform: rotate(35deg);
+}
+
+.des-content>p {
+  margin: 2rem 2rem 0 2rem;
+  border: rgba(51, 163, 142, 0.5) solid 1px;
+  border-radius: 0.5rem;
+  padding: 2rem 4rem 2rem 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.col-time {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: rgba(51, 163, 142, 0.5) solid 1px;
+}
+
+.col-time>p {
+  margin: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.col-footer>p {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.col-header>.menu-control {
+  font-size: 2.2rem;
+}
+
+.menu-control:hover>.col-menu-control {
+  visibility: unset;
+  z-index: 2;
+  display: block;
+}
+
+.col-menu-control {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  animation: open-menu 0.1s ease-in;
+}
+
+.col-menu-control>ul {
+  font-size: 1.6rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.col-menu-control>ul>li {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+
+.repair:hover {
+  color: rgb(51, 163, 142);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.repair-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  animation: open-menu 0.3s ease-in;
+}
+
+.repair-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.repair-content {
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 0.5rem;
+}
+
+.input-repair>input {
+  font-size: 14px;
+  width: 30rem;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  border: #ccc solid 1px;
+  border-radius: 0.5rem;
+}
+
+.input-repair>input:focus {
+  outline: none;
+  background-color: rgba(51, 163, 142, 0.1);
+}
+
+.input-repair>div>label {
+  font-size: 1.6rem;
+  width: 30px;
+}
+
+.button-repair {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-repair>button {
+  cursor: pointer;
+  background: none;
+  border: 1px #ccc solid;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+
+.button-repair>button:hover {
+  transform: scale(1.1);
+}
+
+.status {
+  width: 30rem;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  border: #ccc solid 1px;
+  border-radius: 0.5rem;
+}
+
+.repair-content-add {
+  text-align: center;
+}
+
+.button-repair-add {
+  justify-content: center;
+}
+
+.add-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu-short {
+  align-items: center;
+  margin-top: 2rem !important;
+}
+
+.menu-short>li {
+  font-size: 1.5rem !important;
+}
+
+.menu-short>li>select {
+  margin-left: 2rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.menu-short>li>i {
+  margin: 0 0.5rem;
+}
+
+.menu-short>li>span {
+  margin: 0 0.5rem;
+}
+
+.lable {
+  position: relative;
+}
+
+.lable-validation::before {
+  position: absolute;
+  content: "Value is not corect";
+  color: red;
+  text-align: left;
+  font-size: 1.2rem;
+  width: 30rem;
+  height: 0.2rem;
+  bottom: 0.2rem;
+  right: 0;
+}
+
+.lable-validation::before>input {
+  border-color: red;
+}
+
+@keyframes open-menu {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loader-main {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loader {
+  border: 0.3rem solid #f3f3f3;
+  /* Light grey */
+  border-top: 0.3rem solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  animation: spin 0.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.alert-success-main {
+  position: fixed;
+  z-index: 99;
+  top: 10%;
+  bottom: 0;
+  right: 2%;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alert-success-main>.alert-success>p {
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #9ad1a7;
+  animation: alert 0.3s ease-in;
+}
+
+.alert-arr-main {
+  position: fixed;
+  z-index: 99;
+  top: 10%;
+  bottom: 0;
+  right: 2%;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alert-arr-main>.alert-err>p {
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  color: #571515;
+  background-color: #edd4d4;
+  border: 1px solid #d19a9a;
+  animation: alert 0.3s ease-in;
+}
+
+@keyframes alert {
+  from {
+    transform: translateX(130%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
